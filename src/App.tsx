@@ -528,7 +528,7 @@ export default function App() {
                   <span className="block text-white">Fauzi</span>
                 </h2>
 
-                <p className="mt-5 text-sm sm:text-[15px] text-white leading-relaxed max-w-2xl">
+                <p className="mt-5 text-sm sm:text-[15px] text-white leading-relaxed max-w-2xl text-justify">
                   {PROFILE_DATA.summary}
                 </p>
 
