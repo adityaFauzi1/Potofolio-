@@ -487,6 +487,36 @@ export const PROJECTS_DATA: ProjectItem[] = [
       },
     ],
   },
+  {
+    id: 'portfolio-website',
+    index: '03',
+    title: 'Portfolio Website Aditya Fauzi',
+    subtitle: 'Personal Portfolio & Showcase Project — Web Developer PHP CodeIgniter & MySQL',
+    clientOrContext: 'Personal Project — Aditya Fauzi | Web Developer Portfolio',
+    category: 'fullstack',
+    categoryLabel: 'Full-Stack Web & Portfolio',
+    secondaryCategoryLabel: 'Personal Branding & UI/UX',
+    period: 'Agustus – Oktober 2026',
+    githubUrl: 'https://github.com/adityaFauzi1/Potofolio-.git',
+    featured: false,
+    image: heroWorkspaceImg,
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Lucide React'],
+    problemStatement:
+      'Sebagai lulusan Sistem Informasi (IPK 3.40/4.00) dengan pengalaman merancang dan membangun sistem informasi berbasis web menggunakan PHP dan CodeIgniter, diperlukan platform digital untuk menampilkan profil, proyek, dan kompetensi sebagai Web Developer kepada calon klien atau pemberi kerja. Portfolio perlu menyajikan informasi terkait lulusan Sistem Informasi, proyek skripsi Sistem Informasi Inventory untuk UD. Jaya Lestari, Praktik Kerja Lapangan mengelola data produksi di PT Wilson Surya Unggul, serta keterampilan dalam metode Prototype, pemodelan UML, dan pengujian Black Box Testing.',
+    solutionSummary:
+      'Membangun portfolio website modern dan responsif menggunakan React, TypeScript, Vite, dan Tailwind CSS. Website menampilkan section Home (hero dengan typewriter effect), About (profil & pengalaman), Portfolio/Projects (karya terkait sistem informasi dan web development), serta Contact. Dilengkapi dark mode toggle, animasi scroll reveal, dan navigasi yang mudah diakses. Data konten terstruktur terpusat di portfolioData.ts untuk memudahkan pemeliharaan dan pembaruan.',
+    highlights: [
+      'Membangun portfolio website pribadi sebagai platform menampilkan profil, proyek, dan kompetensi Web Developer.',
+      'Menggunakan React, TypeScript, Vite, Tailwind CSS, dan Framer Motion untuk tampilan modern, responsif, dan interaktif.',
+      'Menampilkan informasi lulusan Sistem Informasi (IPK 3.40/4.00), pengalaman PHP CodeIgniter, proyek skripsi Inventory UD. Jaya Lestari, dan PKL PT Wilson Surya Unggul.',
+      'Dilengkapi dark mode toggle, animasi scroll reveal, serta navigasi yang mudah diakses.',
+      'Data konten terstruktur terpusat di portfolioData.ts untuk memudahkan pemeliharaan dan pembaruan.',
+    ],
+    accessRoles: [],
+    databaseTables: [],
+    umlDiagrams: [],
+    blackBoxTests: [],
+  },
 
 ];
 
