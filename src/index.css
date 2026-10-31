@@ -1,0 +1,552 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F4F4F0;
+    color: #111111;
+    overflow-x: hidden;
+  }
+
+  /* Latar belakang halaman utama: terang di light mode, hitam pekat di dark mode */
+  .page-bg {
+    background-color: #F4F4F0;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * BACKGROUND OVERLAY UTILITIES
+ * Digunakan oleh PortfolioArcBackground (workspace architecture + CTA).
+ * Remainder: preserves contrast over photographic/gradient backgrounds.
+ * --------------------------------------------------------------------------- */
+@layer base {
+  .bg-grid {
+    background-image: linear-gradient(to right, rgba(17, 17, 17, 0.18) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17, 17, 17, 0.16) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .bg-heatmap {
+    background-image: radial-gradient(circle at 50% 50%, rgba(30, 30, 40, 0.35) 0%, transparent 48%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .bg-screen {
+    background-color: rgba(17, 17, 17, 0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .bg-screen-soft {
+    background-color: rgba(17, 17, 17, 0.22);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.text-outline-hero {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #141414;
+}
+
+@media (min-width: 768px) {
+  .text-outline-hero {
+    -webkit-text-stroke: 2px #141414;
+  }
+}
+
+.text-outline-wave {
+  color: transparent;
+  -webkit-text-stroke: 1.25px #141414;
+}
+
+/* =====================================================================
+   DARK MODE THEME SYSTEM (html.dark)
+====================================================================== */
+html.dark body {
+  background-color: #000000;
+  color: #F4F4F0;
+}
+
+html.dark .page-bg {
+  background-color: #000000 !important;
+}
+
+html.dark .text-outline-hero {
+  -webkit-text-stroke-color: #F4F4F0;
+}
+
+html.dark .text-outline-wave {
+  -webkit-text-stroke-color: #F4F4F0;
+}
+
+html.dark .bg-white {
+  background-color: #000000 !important;
+}
+
+html.dark .bg-white\/95 {
+  background-color: #000000 !important;
+}
+
+html.dark .bg-\[\#F4F4F0\] {
+  background-color: #000000 !important;
+}
+
+html.dark .bg-\[\#EAEAE4\] {
+  background-color: #000000 !important;
+}
+
+html.dark .bg-\[\#EAEAE4\]\/60 {
+  background-color: #000000 !important;
+}
+
+html.dark .bg-\[\#F4F4F0\]\/60 {
+  background-color: #000000 !important;
+}
+
+html.dark .bg-red-50\/80 {
+  background-color: rgba(127, 29, 29, 0.28) !important;
+  border-color: rgba(248, 113, 113, 0.45) !important;
+  color: #FECACA !important;
+}
+
+html.dark .text-emerald-800,
+html.dark .text-emerald-700 {
+  color: #34D399 !important;
+}
+
+html.dark .text-amber-700 {
+  color: #FBBF24 !important;
+}
+
+html.dark .bg-\[\#E6E6E6\] {
+  background-color: #000000 !important;
+}
+
+html.dark .bg-\[\#E8E8E8\] {
+  background-color: #000000 !important;
+  box-shadow: -8px -8px 22px rgba(255, 255, 255, 0.03), 10px 10px 28px rgba(0, 0, 0, 0.7) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark .bg-\[\#FAFAFA\] {
+  background-color: #000000 !important;
+}
+
+html.dark .text-\[\#111111\],
+html.dark .text-\[\#141414\] {
+  color: #F4F4F0 !important;
+}
+
+html.dark .text-\[\#111111\]\/90,
+html.dark .text-\[\#141414\]\/90,
+html.dark .text-\[\#111111\]\/85,
+html.dark .text-\[\#141414\]\/85,
+html.dark .text-\[\#111111\]\/80,
+html.dark .text-\[\#141414\]\/80 {
+  color: rgba(244, 244, 240, 0.86) !important;
+}
+
+.profile-summary-text {
+  color: #1E293B;
+}
+
+html.dark .profile-summary-text {
+  color: #FFFFFF !important;
+}
+
+html.dark .text-\[\#111111\]\/75,
+html.dark .text-\[\#141414\]\/75,
+html.dark .text-\[\#111111\]\/70,
+html.dark .text-\[\#141414\]\/70,
+html.dark .text-\[\#111111\]\/65,
+html.dark .text-\[\#141414\]\/65,
+html.dark .text-\[\#111111\]\/60,
+html.dark .text-\[\#141414\]\/60 {
+  color: rgba(244, 244, 240, 0.68) !important;
+}
+
+html.dark .text-\[\#141414\]\/35,
+html.dark .text-\[\#141414\]\/40 {
+  color: rgba(244, 244, 240, 0.35) !important;
+}
+
+html.dark .border-\[\#111111\]\/8,
+html.dark .border-\[\#111111\]\/10,
+html.dark .border-\[\#111111\]\/12,
+html.dark .border-\[\#111111\]\/15,
+html.dark .border-\[\#111111\]\/20,
+html.dark .border-\[\#141414\]\/10,
+html.dark .border-\[\#141414\]\/12,
+html.dark .border-\[\#141414\]\/15 {
+  border-color: rgba(244, 244, 240, 0.14) !important;
+}
+
+html.dark .border-\[\#141414\] {
+  border-color: #F4F4F0 !important;
+}
+
+html.dark .from-white {
+  --tw-gradient-from: #12151E var(--tw-gradient-from-position) !important;
+}
+
+html.dark .via-white\/75 {
+  --tw-gradient-via: rgba(18, 21, 30, 0.78) var(--tw-gradient-via-position) !important;
+}
+
+html.dark .stroke-\[\#141414\] {
+  stroke: #F4F4F0 !important;
+}
+
+/* Keep intentional dark/red cards legible in dark mode */
+html.dark .arc-red-card .text-\[\#141414\],
+html.dark .arc-portrait-card .text-\[\#141414\] {
+  color: #141414 !important;
+}
+
+/* =====================================================================
+   PORTFOLIO SHOWCASE TABS NAVIGATION (ADAPTIVE BACKGROUND & HIGH CONTRAST TEXT)
+====================================================================== */
+.portfolio-tabs-bar {
+  background-color: rgba(20, 20, 20, 0.06);
+  border-color: rgba(20, 20, 20, 0.14);
+  backdrop-filter: blur(12px);
+}
+
+.portfolio-tab-active {
+  color: #FFFFFF !important;
+}
+
+.portfolio-tab-inactive {
+  color: rgba(20, 20, 20, 0.72) !important;
+}
+
+.portfolio-tab-inactive:hover {
+  color: #141414 !important;
+  background-color: rgba(20, 20, 20, 0.06);
+}
+
+.portfolio-tab-pill {
+  background-color: #141414;
+  border: 1px solid rgba(20, 20, 20, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+}
+
+html.dark .portfolio-tabs-bar {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark .portfolio-tab-active {
+  color: #FFFFFF !important;
+}
+
+html.dark .portfolio-tab-inactive {
+  color: rgba(244, 244, 240, 0.68) !important;
+}
+
+html.dark .portfolio-tab-inactive:hover {
+  color: #FFFFFF !important;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+html.dark .portfolio-tab-pill {
+  background-color: rgba(255, 255, 255, 0.13) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* =====================================================================
+   ABOUT ME ACTION BUTTONS (DOWNLOAD CV & VIEW PROJECTS — IDENTICAL STYLE)
+====================================================================== */
+.about-action-tab {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.about-action-tab span,
+.about-action-tab svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+.about-action-tab:hover {
+  background-color: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.38) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .arc-red-card .stroke-\[\#141414\] {
+  stroke: #141414 !important;
+}
+
+@keyframes portfolio-letter-wave {
+  0%, 100% {
+    transform: translateY(0px) skewY(0deg);
+  }
+  50% {
+    transform: translateY(-8px) skewY(-2deg);
+  }
+}
+
+@keyframes portfolio-echo-wave-1 {
+  0%, 100% {
+    transform: translate(-6px, 6px);
+  }
+  50% {
+    transform: translate(6px, -7px);
+  }
+}
+
+@keyframes portfolio-echo-wave-2 {
+  0%, 100% {
+    transform: translate(8px, -6px);
+  }
+  50% {
+    transform: translate(-8px, 8px);
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+
+/* =====================================================================
+   HERO PROFILE PHOTO REALISM, FEATHER MASK, GLOW & FLOATING ANIMATION
+====================================================================== */
+@keyframes hero-portrait-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.hero-portrait-frame {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 20, 20, 0.045) 0%,
+    rgba(20, 20, 20, 0.015) 68%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-top: 1px solid rgba(20, 20, 20, 0.08);
+  border-left: 1px solid rgba(20, 20, 20, 0.05);
+  border-right: 1px solid rgba(20, 20, 20, 0.05);
+  isolation: isolate;
+}
+
+.hero-portrait-frame::before {
+  content: '';
+  position: absolute;
+  inset: 12% 14% 18% 14%;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at 50% 42%,
+    rgba(37, 99, 235, 0.09) 0%,
+    rgba(20, 20, 20, 0.04) 52%,
+    transparent 76%
+  );
+  filter: blur(20px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+html.dark .hero-portrait-frame {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.055) 0%,
+    rgba(37, 99, 235, 0.03) 65%,
+    rgba(18, 21, 30, 0) 100%
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+html.dark .hero-portrait-frame::before {
+  background: radial-gradient(
+    circle at 50% 42%,
+    rgba(96, 165, 250, 0.16) 0%,
+    rgba(37, 99, 235, 0.06) 52%,
+    transparent 76%
+  );
+}
+
+.hero-portrait-img {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+  object-fit: contain !important;
+  object-position: bottom center !important;
+  -webkit-mask-image: linear-gradient(to bottom, black 78%, rgba(0, 0, 0, 0.65) 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 78%, rgba(0, 0, 0, 0.65) 90%, transparent 100%);
+  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.2)) contrast(1.03);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+html.dark .hero-portrait-img {
+  filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.65)) contrast(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-portrait-img {
+    animation: none;
+  }
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 34s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* =====================================================================
+   PORTFOLIO ARC BACKDROP (Showcase → Mari Berdiskusi continuous layer)
+   Latar kontinu yang mengalir dari #proyek sampai #kontak.
+   Ringan & senada dengan konten terang (teks gelap) yang sudah ada.
+====================================================================== */
+
+.arc-bg-root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  /* Dasar terang lembut, senada dengan body #E7E7E2 */
+  background:
+    linear-gradient(180deg, rgba(231, 231, 226, 0.85) 0%, rgba(226, 226, 219, 0.7) 55%, rgba(226, 226, 219, 0.55) 100%);
+  transition: background 320ms ease;
+}
+
+html.dark .arc-bg-root {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 55%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+/* 1) Scrim terang menjaga kontras teks gelap di atas grid */
+.arc-bg-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(231, 231, 226, 0.78) 0%,
+      rgba(231, 231, 226, 0.68) 45%,
+      rgba(231, 231, 226, 0.58) 100%
+    );
+  transition: background 320ms ease;
+}
+
+html.dark .arc-bg-scrim {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.74) 45%,
+      rgba(0, 0, 0, 0.66) 100%
+    );
+}
+
+/* 2) Grid blueprint tipis bergaya denah sistem (gratis, bukan SVG) */
+.arc-bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  /* Redamkan tepi agar grid tidak "berpotongan" di batas section */
+  mask-image: radial-gradient(120% 90% at 50% 30%, black 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(120% 90% at 50% 30%, black 55%, transparent 100%);
+  transition: background-image 320ms ease;
+}
+
+html.dark .arc-bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(244, 244, 240, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(244, 244, 240, 0.06) 1px, transparent 1px);
+}
+
+/* 3) Aksen radial biru lembut (tanda arsitektur PHP/CodeIgniter/MySQL) */
+.arc-bg-accent {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(48% 42% at 82% 12%, rgba(37, 99, 235, 0.12) 0%, transparent 70%),
+    radial-gradient(42% 38% at 12% 88%, rgba(37, 99, 235, 0.10) 0%, transparent 72%);
+  transition: background 320ms ease;
+}
+
+html.dark .arc-bg-accent {
+  background:
+    radial-gradient(48% 42% at 82% 12%, rgba(37, 99, 235, 0.16) 0%, transparent 70%),
+    radial-gradient(42% 38% at 12% 88%, rgba(37, 99, 235, 0.14) 0%, transparent 72%);
+}
+
+/* Pastikan konten di dalam region tetap berada di atas backdrop */
+.arc-region {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Area section dalam region dibuat transparan agar latar mengalir mulus */
+.arc-region > section {
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: #ffffff !important;
+  }
+}
+
