@@ -6,8 +6,8 @@ interface CvDocumentModalProps {
   onClose: () => void;
 }
 
-const CV_PDF_URL = '/CV_Aditya_Fauzi_Revisi_Dark.pdf';
-const CV_PDF_FILENAME = 'CV_Aditya_Fauzi_Revisi_Dark.pdf';
+const CV_PDF_URL = '/CV_Aditya_Fauzi.pdf';
+const CV_PDF_FILENAME = 'CV_Aditya_Fauzi.pdf';
 
 export const CvDocumentModal: React.FC<CvDocumentModalProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
