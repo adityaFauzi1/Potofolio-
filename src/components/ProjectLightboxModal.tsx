@@ -208,7 +208,7 @@ export const ProjectLightboxModal: React.FC<ProjectLightboxModalProps> = ({
                     ? 'Implementasi Antarmuka Toko Online Interaktif'
                     : 'Implementasi Sistem Terintegrasi Real-Time'}
                 </h4>
-                <p className="text-sm text-[#111111]/80 leading-relaxed">
+                <p className="text-sm text-justify text-[#111111]/80 leading-relaxed">
                   {project.solutionSummary}
                 </p>
               </div>
@@ -281,7 +281,7 @@ export const ProjectLightboxModal: React.FC<ProjectLightboxModalProps> = ({
                       <h5 className="text-base font-semibold text-[#111111]">
                         {uml.type}
                       </h5>
-                      <p className="text-sm text-[#111111]/75 mt-2 leading-relaxed">
+                      <p className="text-sm text-justify text-[#111111]/75 mt-2 leading-relaxed">
                         {uml.summary}
                       </p>
                     </div>
