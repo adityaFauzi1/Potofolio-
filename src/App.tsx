@@ -1135,7 +1135,7 @@ export default function App() {
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-sm font-semibold rounded-lg transition-colors cursor-pointer whitespace-nowrap"
                   >
                     <Send className="w-4 h-4" />
-                    <span>Kirim Pesan via Email</span>
+                    <span>Kirim Pesan via Email aaaaaaaaaaaaaaaaaaaaa</span>
                   </button>
 
                   {contactSubmitted && (
