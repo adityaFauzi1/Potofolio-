@@ -2,6 +2,7 @@ import heroWorkspaceImg from '../assets/images/hero_workspace_architecture_17912
 import adityaBeachPortraitImg from '../assets/images/aditya_beach_cutout_centered.png';
 import projectInventoryImg from '../assets/images/project_inventory_jaya_lestari_dashboard.png';
 import projectEcommerceImg from '../assets/images/project_ecommerce.png';
+import portofolioWebsiteImg from '../assets/images/portofolio_website.png';
 
 export interface BlackBoxTestCase {
   id: string;
@@ -499,7 +500,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     period: 'Agustus – Oktober 2026',
     githubUrl: 'https://github.com/adityaFauzi1/Potofolio-.git',
     featured: false,
-    image: heroWorkspaceImg,
+    image: portofolioWebsiteImg,
     techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Lucide React'],
     problemStatement:
       'Sebagai lulusan Sistem Informasi (IPK 3.40/4.00) dengan pengalaman merancang dan membangun sistem informasi berbasis web menggunakan PHP dan CodeIgniter, diperlukan platform digital untuk menampilkan profil, proyek, dan kompetensi sebagai Web Developer kepada calon klien atau pemberi kerja. Portfolio perlu menyajikan informasi terkait lulusan Sistem Informasi, proyek skripsi Sistem Informasi Inventory untuk UD. Jaya Lestari, Praktik Kerja Lapangan mengelola data produksi di PT Wilson Surya Unggul, serta keterampilan dalam metode Prototype, pemodelan UML, dan pengujian Black Box Testing.',
