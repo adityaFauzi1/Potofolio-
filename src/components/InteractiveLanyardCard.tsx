@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useSpring, useMotionValue, useTransform } from 'motion/react';
 import { PROFILE_DATA } from '../data/portfolioData';
+import adityaBeachPortraitImg from '../assets/images/aditya_beach_cutout_centered.png';
 import { ResilientImage } from './ResilientImage';
 
 export const InteractiveLanyardCard: React.FC = () => {
@@ -227,7 +228,7 @@ export const InteractiveLanyardCard: React.FC = () => {
             {/* High-Contrast Monochrome Portrait of Aditya Fauzi (Using the exact user photo) */}
             <div className="relative w-full h-[94%] flex items-end justify-center overflow-hidden">
               <ResilientImage
-                src={PROFILE_DATA.portraitImage}
+                src={adityaBeachPortraitImg}
                 alt="Aditya Fauzi — Digital ID Card"
                 fallbackTitle="Aditya Fauzi"
                 className="w-full h-full object-contain object-bottom grayscale contrast-125 brightness-105 select-none pointer-events-none drop-shadow-[0_14px_24px_rgba(0,0,0,0.65)]"
