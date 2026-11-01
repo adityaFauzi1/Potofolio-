@@ -1,5 +1,6 @@
 import heroWorkspaceImg from '../assets/images/hero_workspace_architecture_1791202150561.jpg';
 import adityaBeachPortraitImg from '../assets/images/aditya_beach_cutout_centered.png';
+import adityaFauziImg from '../assets/images/aditya fauzi.png';
 import projectInventoryImg from '../assets/images/project_inventory_jaya_lestari_dashboard.png';
 import projectEcommerceImg from '../assets/images/project_ecommerce.png';
 import portofolioWebsiteImg from '../assets/images/portofolio_website.png';
@@ -66,7 +67,7 @@ export const PROFILE_DATA = {
   phoneRaw: '6288290830504',
   email: 'adityafauzi399@gmail.com',
   heroImage: heroWorkspaceImg,
-  portraitImage: adityaBeachPortraitImg,
+  portraitImage: adityaFauziImg,
   summary:
     'Lulusan Sistem Informasi (IPK 3.40/4.00) dengan pengalaman merancang dan membangun sistem informasi berbasis web menggunakan PHP dan CodeIgniter, termasuk mengembangkan Sistem Informasi Inventory untuk UD. Jaya Lestari sebagai proyek skripsi serta Praktik Kerja Lapangan mengelola data produksi di PT Wilson Surya Unggul. Terbiasa menerapkan metode Prototype, pemodelan UML, dan pengujian Black Box Testing. Memiliki pemahaman basis data relasional (MySQL), pengalaman organisasi di bidang hubungan masyarakat, dan requirement gathering untuk menerjemahkan kebutuhan pengguna menjadi solusi sistem yang efektif.',
   cvSummary:
