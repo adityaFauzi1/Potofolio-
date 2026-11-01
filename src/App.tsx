@@ -707,7 +707,7 @@ export default function App() {
                 >
                   KEMAMPUAN TEKNIS
                 </h2>
-                <p className="text-sm text-[#111111]/70 mt-2 max-w-xl">
+                <p className="text-sm text-justify text-[#111111]/70 mt-2 max-w-xl">
                   Mengembangkan aplikasi web dengan PHP, CodeIgniter & Laravel, mengelola dan menyimpan data dengan MySQL, menggunakan VS Code dan XAMPP untuk mengembangkan serta menguji aplikasi berbasis web, merancang sistem dengan Prototype & UML, menguji fungsionalitas dengan Black Box Testing, dan mengidentifikasi kebutuhan sistem melalui Requirement Gathering.
                 </p>
               </ScrollReveal>
