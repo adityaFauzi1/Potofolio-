@@ -45,8 +45,8 @@ interface CertificateItem {
 const CERTIFICATES_LIST: CertificateItem[] = [
   {
     id: 'cert-bootcamp-task-manager-laravel',
-    title: 'SERTIFIKAT BOOTCAMP MEMBANGUN APLIKASI TASK MANAGER DENGAN LARAVEL',
-    issuer: 'UNIVERSITAS INSAN PEMBANGUNAN INDONESIA · HIMASIF',
+    title: 'SERTIFIKAT',
+    issuer: 'UNIVERSITAS INSAN PEMBANGUNAN INDONESIA · UNIPI',
     recipient: 'ADITYA FAUZI (NPM: 2022804042)',
     period: '14–16 Maret 2025 · Bootcamp Online — Peserta',
     roleOrProgram: 'Membangun Aplikasi Task Manager dengan Laravel',
