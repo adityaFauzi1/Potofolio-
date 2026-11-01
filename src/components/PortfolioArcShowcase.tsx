@@ -436,9 +436,6 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
                         <h4 className="text-xs sm:text-sm font-bold text-[#141414] group-hover:text-[#2563EB] transition-colors">
                           {cert.title}
                         </h4>
-                        <p className="text-[11px] text-[#141414]/60 mt-0.5">
-                          {cert.recipient} · {cert.roleOrProgram}
-                        </p>
                       </div>
                       <ArrowRight className="w-4 h-4 text-[#141414]/45 group-hover:text-[#2563EB] group-hover:translate-x-0.5 transition-all shrink-0" />
                     </div>
