@@ -572,7 +572,7 @@ export default function App() {
                       src={PROFILE_DATA.portraitImage}
                       alt="Aditya Fauzi — About Me Portrait"
                       fallbackTitle="Aditya Fauzi"
-                      className="w-[86%] h-[86%] object-contain object-center select-none pointer-events-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.5)]"
+                      className="w-full h-full object-cover object-center select-none pointer-events-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.5)]"
                     />
                   </div>
                 </div>
