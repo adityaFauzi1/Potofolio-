@@ -45,11 +45,12 @@ interface CertificateItem {
 const CERTIFICATES_LIST: CertificateItem[] = [
   {
     id: 'cert-bootcamp-task-manager-laravel',
-    title: 'SERTIFIKAT',
-    issuer: 'UNIVERSITAS INSAN PEMBANGUNAN INDONESIA · UNIPI',
+    title: 'SERTIFIKAT BOOTCAMP MEMBANGUN APLIKASI TASK MANAGER DENGAN LARAVEL',
+    issuer: 'UNIVERSITAS INSAN PEMBANGUNAN INDONESIA · HIMASIF',
     recipient: 'ADITYA FAUZI (NPM: 2022804042)',
     period: '14–16 Maret 2025 · Bootcamp Online — Peserta',
-    roleOrProgram:',
+    roleOrProgram: 'Membangun Aplikasi Task Manager dengan Laravel',
+    predicate: 'Peserta (Selesai)',
     description:
       'Diberikan kepada Aditya Fauzi sebagai peserta pada kegiatan Bootcamp Online “Membangun Aplikasi Task Manager dengan Laravel” tanggal 14–16 Maret 2025 — dari belajar teori hingga praktik.',
     badgeCode: 'Bootcamp · Laravel · Task Manager · 14–16 Mar 2025',
@@ -403,9 +404,6 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
               >
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold text-[#141414]">Certificates</h2>
-                  <p className="text-xs sm:text-sm text-[#141414]/60 mt-1">
-                    Sertifikat dan pengakuan yang telah diperoleh
-                  </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {CERTIFICATES_LIST.map((cert) => (
