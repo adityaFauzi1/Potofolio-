@@ -39,7 +39,7 @@ interface CertificateItem {
   predicate: string;
   description: string;
   badgeCode: string;
-  image?: string;
+  driveUrl?: string;
 }
 
 const CERTIFICATES_LIST: CertificateItem[] = [
@@ -54,7 +54,7 @@ const CERTIFICATES_LIST: CertificateItem[] = [
     description:
       'Diberikan atas dedikasi dan kontribusi dalam pencatatan hasil produksi kabel harian (seri NYA, NYM, NYY) serta sinkronisasi stok fisik dengan sistem ERP perusahaan.',
     badgeCode: 'No: PKL/WSU/SI/2025',
-    image: '/assets/sertifikat_pkl_wilson.jpg',
+    driveUrl: 'https://drive.google.com/drive/folders/1zNOY18iluk7EWvo6wa8mgUSkzy938y3S',
   },
   {
     id: 'cert-bootcamp-task-manager-laravel',
@@ -67,7 +67,7 @@ const CERTIFICATES_LIST: CertificateItem[] = [
     description:
       'Diberikan kepada Aditya Fauzi sebagai peserta pada kegiatan Bootcamp Online “Membangun Aplikasi Task Manager dengan Laravel” tanggal 14–16 Maret 2025 — dari belajar teori hingga praktik.',
     badgeCode: 'Bootcamp · Laravel · Task Manager · 14–16 Mar 2025',
-    image: '/assets/sertifikat_bootcamp_laravel.png',
+    driveUrl: 'https://drive.google.com/drive/folders/1zNOY18iluk7EWvo6wa8mgUSkzy938y3S',
   },
 ];
 
@@ -596,15 +596,17 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
                   {selectedCertificate.badgeCode}
                 </div>
 
-                {selectedCertificate.image && (
-                  <div className="relative mt-5 mx-auto max-w-md w-full rounded-xl overflow-hidden border border-[#111111]/15 shadow-[0_16px_38px_-16px_rgba(0,0,0,0.3)] bg-[#111111]/5">
-                    <ResilientImage
-                      src={selectedCertificate.image}
-                      alt={`Dokumentasi ${selectedCertificate.title}`}
-                      className="w-full max-h-72 object-cover object-center"
-                      fallbackTitle={selectedCertificate.title}
-                      fallbackSubtitle="Dokumentasi Sertifikat Resmi"
-                    />
+                {selectedCertificate.driveUrl && (
+                  <div className="mt-5 mx-auto max-w-md w-full flex justify-center">
+                    <a
+                      href={selectedCertificate.driveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full max-w-xs py-4 bg-[#111111]/5 border border-[#111111]/15 rounded-xl hover:bg-[#111111]/10 hover:border-[#2563EB]/50 transition-colors text-sm font-semibold text-[#111111] uppercase tracking-wider"
+                    >
+                      <span className="mr-2">📁</span>
+                      Buka Sertifikat di Google Drive
+                    </a>
                   </div>
                 )}
 
