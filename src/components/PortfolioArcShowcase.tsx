@@ -559,11 +559,6 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
                 </p>
 
                 <div className="mt-6 pt-5 border-t border-[#111111]/15 flex flex-wrap items-center justify-between gap-4 text-xs">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-800 font-bold">
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>Predikat: {selectedCertificate.predicate}</span>
-                  </div>
-
                   <button
                     type="button"
                     onClick={() => {
