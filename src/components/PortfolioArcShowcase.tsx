@@ -44,19 +44,6 @@ interface CertificateItem {
 
 const CERTIFICATES_LIST: CertificateItem[] = [
   {
-    id: 'cert-pkl-wilson',
-    title: 'SERTIFIKAT PKL PT WILSON SURYA UNGGUL',
-    issuer: 'PT. WILSON SURYA UNGGUL',
-    recipient: 'ADITYA FAUZI',
-    period: 'Program Praktik Kerja Lapangan (PKL)',
-    roleOrProgram: 'Pengelolaan Data Produksi & Rekonsiliasi Sistem ERP',
-    predicate: 'Sangat Baik (Akurasi Data 98%)',
-    description:
-      'Diberikan atas dedikasi dan kontribusi dalam pencatatan hasil produksi kabel harian (seri NYA, NYM, NYY) serta sinkronisasi stok fisik dengan sistem ERP perusahaan.',
-    badgeCode: 'No: PKL/WSU/SI/2025',
-    driveUrl: 'https://drive.google.com/drive/folders/1zNOY18iluk7EWvo6wa8mgUSkzy938y3S',
-  },
-  {
     id: 'cert-bootcamp-task-manager-laravel',
     title: 'SERTIFIKAT BOOTCAMP MEMBANGUN APLIKASI TASK MANAGER DENGAN LARAVEL',
     issuer: 'UNIVERSITAS INSAN PEMBANGUNAN INDONESIA · HIMASIF',
