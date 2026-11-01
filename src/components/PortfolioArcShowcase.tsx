@@ -47,7 +47,7 @@ const CERTIFICATES_LIST: CertificateItem[] = [
     id: 'cert-bootcamp-task-manager-laravel',
     title: '',
     issuer: 'UNIVERSITAS INSAN PEMBANGUNAN INDONESIA · UNIPI',
-    recipient: 'ADITYA FAUZI (NPM: 2022804042)',
+    recipient: '',
     period: '',
     roleOrProgram: '',
     predicate: '',
@@ -413,7 +413,7 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
                     className="group cursor-pointer rounded-2xl bg-white border border-[#141414]/12 hover:border-[#2563EB]/50 p-4 flex flex-col justify-between shadow-[0_14px_34px_-12px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300"
                   >
                     {/* Google Drive Certificate Link */}
-                    <div className="relative h-44 sm:h-48 w-full rounded-xl border border-[#141414]/10 bg-[#0D0F14] flex items-center justify-center overflow-hidden group-hover:border-[#2563EB]/50 transition-colors">
+                    <div className="relative h-44 sm:h-48 w-full max-w-sm mx-auto rounded-xl border border-[#141414]/10 bg-[#0D0F14] flex items-center justify-center overflow-hidden group-hover:border-[#2563EB]/50 transition-colors">
                       <a
                         href={cert.driveUrl}
                         target="_blank"
