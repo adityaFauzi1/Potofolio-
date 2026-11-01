@@ -400,9 +400,16 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25 }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                className="space-y-6"
               >
-                {CERTIFICATES_LIST.map((cert) => (
+                <div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-[#141414]">Certificates</h2>
+                  <p className="text-xs sm:text-sm text-[#141414]/60 mt-1">
+                    Sertifikat dan pengakuan yang telah diperoleh
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {CERTIFICATES_LIST.map((cert) => (
                   <div
                     key={cert.id}
                     onClick={() => setSelectedCertificate(cert)}
@@ -437,6 +444,7 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
                     </div>
                   </div>
                 ))}
+                </div>
               </motion.div>
             )}
 
