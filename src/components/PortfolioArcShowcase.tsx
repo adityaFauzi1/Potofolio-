@@ -421,86 +421,29 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
                     onClick={() => setSelectedCertificate(cert)}
                     className="group cursor-pointer rounded-2xl bg-white border border-[#141414]/12 hover:border-[#2563EB]/50 p-4 flex flex-col justify-between shadow-[0_14px_34px_-12px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300"
                   >
-                    {/* Visual Certificate Document Frame (Like Video 0:29) */}
-                    {cert.image ? (
-                      <>
-                        {/* Direct Photo Preview on the Certificates page */}
-                        <div className="relative h-44 sm:h-48 w-full rounded-xl overflow-hidden bg-[#0D0F14] border border-[#141414]/10">
-                          <ResilientImage
-                            src={cert.image}
-                            alt={`Dokumentasi ${cert.title}`}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            fallbackTitle={cert.title}
-                            fallbackSubtitle="Dokumentasi Sertifikat Resmi"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-                          <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/65 backdrop-blur-sm border border-white/15 text-[10px] font-mono-tabular font-semibold text-white">
-                            SERTIFIKAT
-                          </div>
-                          <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2 text-[11px] font-mono-tabular text-white/85">
-                            <span className="truncate">{cert.issuer}</span>
-                            <span className="shrink-0">{cert.period}</span>
-                          </div>
-                        </div>
-
-                        {/* Compact info strip under the photo */}
-                        <div className="mt-3 flex items-center gap-2 px-1">
-                          <span className="text-[11px] font-mono-tabular text-[#141414]/60 truncate">
-                            {cert.badgeCode}
-                          </span>
-                          <span className="ml-auto inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 text-[9px] font-semibold shrink-0">
-                            <CheckCircle2 className="w-2.5 h-2.5" />
-                            <span>{cert.predicate}</span>
-                          </span>
-                        </div>
-                      </>
-                    ) : (
-                    <div className="relative rounded-xl bg-[#FAF9F5] border-2 border-[#D4AF37]/45 p-4 text-center shadow-inner overflow-hidden group-hover:scale-[1.01] transition-transform">
-                      {/* Decorative corner borders */}
-                      <div className="pointer-events-none absolute inset-1.5 border border-[#1E3A8A]/20 rounded-lg" />
-
-                      <div className="relative z-10 flex flex-col items-center">
-                        <div className="w-8 h-8 rounded-full bg-[#1E3A8A]/10 border border-[#1E3A8A]/25 flex items-center justify-center text-[#1E3A8A] mb-1.5">
-                          <Award className="w-4 h-4" />
-                        </div>
-                        <div className="text-[9px] font-mono-tabular font-bold tracking-wider uppercase text-[#1E3A8A]">
-                          {cert.issuer}
-                        </div>
-                        <div className="mt-1 text-sm font-serif font-bold tracking-widest text-[#111111] uppercase">
-                          SERTIFIKAT
-                        </div>
-                        <div className="text-[8px] font-mono-tabular text-[#111111]/55">
-                          {cert.badgeCode}
-                        </div>
-
-                        <div className="mt-2 text-[9px] text-[#111111]/60">
-                          Diberikan kepada:
-                        </div>
-                        <div className="text-xs font-extrabold tracking-wide text-[#111111] underline decoration-[#D4AF37] underline-offset-2">
-                          {cert.recipient}
-                        </div>
-
-                        <div className="mt-2 text-[9px] font-semibold text-[#1E3A8A] line-clamp-1">
-                          {cert.roleOrProgram}
-                        </div>
-                        <div className="mt-1 inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 text-[9px] font-semibold">
-                          <CheckCircle2 className="w-2.5 h-2.5" />
-                          <span>{cert.predicate}</span>
-                        </div>
-                      </div>
+                    {/* Google Drive Certificate Link */}
+                    <div className="relative h-44 sm:h-48 w-full rounded-xl border border-[#141414]/10 bg-[#0D0F14] flex items-center justify-center overflow-hidden group-hover:border-[#2563EB]/50 transition-colors">
+                      <a
+                        href={cert.driveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center justify-center h-full w-full px-6 py-4 text-center"
+                      >
+                        <span className="mb-2 text-2xl">📁</span>
+                        <span className="text-sm font-semibold text-[#2563EB] uppercase tracking-wider group-hover:underline">
+                          Buka Sertifikat di Google Drive
+                        </span>
+                      </a>
                     </div>
-                    )}
 
-                    {/* Bottom Caption matching video */}
+                    {/* Bottom Caption */}
                     <div className="mt-3.5 flex items-center justify-between px-1">
                       <div>
                         <h4 className="text-xs sm:text-sm font-bold text-[#141414] group-hover:text-[#2563EB] transition-colors">
                           {cert.title}
                         </h4>
                         <p className="text-[11px] text-[#141414]/60 mt-0.5">
-                          {cert.image
-                            ? `${cert.recipient} · ${cert.roleOrProgram}`
-                            : 'Klik untuk memperbesar dokumen'}
+                          {cert.recipient} · {cert.roleOrProgram}
                         </p>
                       </div>
                       <ArrowRight className="w-4 h-4 text-[#141414]/45 group-hover:text-[#2563EB] group-hover:translate-x-0.5 transition-all shrink-0" />
