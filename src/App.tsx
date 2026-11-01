@@ -567,12 +567,12 @@ export default function App() {
                 className="lg:col-span-5 flex justify-center lg:justify-end"
               >
                 <div className="relative w-64 h-64 sm:w-76 sm:h-76 md:w-84 md:h-84 rounded-full p-1.5 bg-gradient-to-b from-white/20 via-white/5 to-transparent shadow-[0_24px_60px_rgba(0,0,0,0.65)]">
-                  <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-b from-[#1E2433] to-[#0D0F14] border border-white/10 flex items-end justify-center">
+                  <div className="relative w-full h-full rounded-full overflow-hidden bg-[#16181b] border border-white/10 flex items-center justify-center">
                     <ResilientImage
                       src={PROFILE_DATA.portraitImage}
                       alt="Aditya Fauzi — About Me Portrait"
                       fallbackTitle="Aditya Fauzi"
-                      className="w-[92%] h-[94%] object-contain object-bottom select-none pointer-events-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.5)]"
+                      className="w-[72%] h-[72%] object-contain object-center select-none pointer-events-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.5)]"
                     />
                   </div>
                 </div>
