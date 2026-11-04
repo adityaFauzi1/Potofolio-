@@ -225,8 +225,8 @@ export const InteractiveLanyardCard: React.FC = () => {
               }}
             />
 
-            {/* Portrait CV ID Card (cv_idcard.jpeg) */}
-            <div className="relative w-full h-[94%] flex items-end justify-center overflow-hidden">
+            {/* Portrait CV ID Card (cv_idcard.jpeg) — foto di tengah, penuh tanpa celah */}
+            <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
               <ResilientImage
                 src={adityaBeachPortraitImg}
                 alt="Aditya Fauzi — Digital ID Card"
