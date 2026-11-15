@@ -467,12 +467,12 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
                       <div className="text-sm sm:text-base font-bold text-[#141414] truncate">
                         {tech.name}
                       </div>
-                      {/* Level keterampilan — muncul saat hover */}
-                      <div className="mt-0.5 text-[11px] sm:text-xs font-mono-tabular font-semibold text-[#2563EB] opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                      {/* Level keterampilan — selalu muncul di hp/tablet (md dan di bawah), muncul saat hover di desktop */}
+                      <div className="mt-0.5 text-[11px] sm:text-xs font-mono-tabular font-semibold text-[#2563EB] md:opacity-0 md:translate-y-1 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300">
                         {tech.level}
-                      </div>
                     </div>
                   </div>
+                </div>
                 ))}
               </motion.div>
             )}
