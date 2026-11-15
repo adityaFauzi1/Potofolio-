@@ -567,5 +567,14 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
                     }}
                     className="px-4 py-2 rounded-lg bg-[#111111] text-white font-semibold hover:bg-[#2563EB] transition-colors cursor-pointer"
                   >
+                    
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
   );
 };
