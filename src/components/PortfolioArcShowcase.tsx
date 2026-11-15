@@ -158,6 +158,7 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
 }) => {
   const [activeTab, setActiveTab] = useState<ShowcaseTab>('projects');
   const [selectedCertificate, setSelectedCertificate] = useState<CertificateItem | null>(null);
+  const [expandedTech, setExpandedTech] = useState<Set<string>>(new Set());
 
   const renderTechIcon = (item: TechStackBadge) => {
     switch (item.logoType) {
