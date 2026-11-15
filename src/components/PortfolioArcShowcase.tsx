@@ -46,7 +46,7 @@ const CERTIFICATES_LIST: CertificateItem[] = [
   {
     id: 'cert-bootcamp-task-manager-laravel',
     title: '',
-    issuer: 'UNIVERSITAS INSAN PEMBANGUNAN INDONESIA · UNIPI',
+    issuer: '',
     recipient: '',
     period: '',
     roleOrProgram: '',
@@ -567,14 +567,5 @@ export const PortfolioArcShowcase: React.FC<PortfolioArcShowcaseProps> = ({
                     }}
                     className="px-4 py-2 rounded-lg bg-[#111111] text-white font-semibold hover:bg-[#2563EB] transition-colors cursor-pointer"
                   >
-                    Lihat di Dokumen CV Lengkap
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </section>
   );
 };
